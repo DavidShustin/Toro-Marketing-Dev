@@ -1,0 +1,76 @@
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
+
+const Navigation: React.FC = () => {
+  const location = useLocation();
+  
+  const scrollToFooter = () => {
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-toro-light/90 backdrop-blur-md border-b border-toro-grey/20">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <img 
+              src="https://d64gsuwffb70l.cloudfront.net/68436cb49f05d486fb67687f_1753122568533_4b693e69.png" 
+              alt="Toro Marketing Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <div>
+              <span className="text-xl font-bold text-toro-gold">TORO</span>
+              <span className="text-sm font-semibold text-toro-dark ml-1">MARKETING</span>
+            </div>
+          </Link>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <Link 
+              to="/marketing" 
+              className={`transition-colors ${
+                location.pathname === '/marketing' 
+                  ? 'text-toro-gold font-semibold' 
+                  : 'text-toro-grey hover:text-toro-gold'
+              }`}
+            >
+              Marketing
+            </Link>
+            <Link 
+              to="/pricing" 
+              className={`transition-colors ${
+                location.pathname === '/pricing' 
+                  ? 'text-toro-gold font-semibold' 
+                  : 'text-toro-grey hover:text-toro-gold'
+              }`}
+            >
+              Pricing
+            </Link>
+            <Link 
+              to="/about" 
+              className={`transition-colors ${
+                location.pathname === '/about' 
+                  ? 'text-toro-gold font-semibold' 
+                  : 'text-toro-grey hover:text-toro-gold'
+              }`}
+            >
+              About Us
+            </Link>
+          </div>
+          
+          <Button 
+            onClick={scrollToFooter}
+            className="bg-toro-gold hover:bg-toro-gold-dark text-toro-dark font-semibold"
+          >
+            Contact Us
+          </Button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
