@@ -3,13 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  root: path.resolve(__dirname, "marketing-import"),  // ← serve from here
+  root: path.resolve(__dirname, "marketing-import"),
   publicDir: path.resolve(__dirname, "marketing-import/public"),
-  server: {
-    host: "0.0.0.0",
-    port: 3000,
-    strictPort: true,
-  },
+  server: { host: "0.0.0.0", port: 3000, strictPort: true },
   plugins: [react()],
   resolve: {
     alias: {

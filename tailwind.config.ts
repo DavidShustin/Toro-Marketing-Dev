@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
-import animate from "tailwindcss-animate";
-import typography from "@tailwindcss/typography";
+import * as typography from "@tailwindcss/typography";
+import * as animate   from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -54,13 +54,25 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
+        yellow: {
+          50:  "#fdfaf7",
+          100: "#fbf7ef",
+          200: "#f7efe0",
+          300: "#f2e6d1",
+          400: "#ecdcc2",
+          500: "#976811ff", // ← Toro‑gold hex (swap if you have a slightly different one)
+          600: "#9c8606", // ← Darker shade
+          700: "#846f05",
+          800: "#695b04",
+          900: "#4e4303",
+        },
         // Toro Marketing brand colors
         'toro-dark': '#2d2d2d',
         'toro-grey': '#4a4a4a',
         'toro-light': '#f8f8f8',
-        'toro-gold': '#d4af37',
-        'toro-gold-light': '#e6c757',
-        'toro-gold-dark': '#b8941f',
+        'toro-gold': '#976811ff',
+        'toro-gold-light': '#976811ff',
+        'toro-gold-dark': '#9c8606ff',
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',
           foreground: 'hsl(var(--sidebar-foreground))',

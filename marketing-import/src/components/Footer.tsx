@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="footer" className="bg-toro-dark text-toro-light py-12">
+    <footer id="footer" className="bg-toro-dark text-toro-light py-12 ps-90px">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mx-auto">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
               />
               <span className="text-xl font-bold text-toro-gold">TORO MARKETING</span>
             </div>
-            <p className="text-toro-light/80">Full-scale video content creation, digital platform management, and targeted campaigns.</p>
+            
           </div>
           <div>
-            <h4 className="font-semibold text-toro-gold mb-4">Services</h4>
+            <h4 className="font-semibold text-toro-gold mb-4">Our Services</h4>
             <ul className="space-y-2 text-toro-light/80">
               <li>Video Content Creation</li>
               <li>Social Media Campaigns</li>
@@ -28,10 +28,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-semibold text-toro-gold mb-4">Contact Info</h4>
             <div className="space-y-2 text-toro-light/80">
-              <p>📧 info@toromarketing.com</p>
-              <p>📱 (555) 123-4567</p>
-              <p>📍 123 Business Ave, Suite 100</p>
-              <p className="ml-4">Marketing City, MC 12345</p>
+              <p>📧 kyle@toro-marketing.com</p>
+              <p>📱 (561) 923-5287</p>
+              <p>📍Boca Raton, FL 33433</p>
               <div className="mt-4">
                 <p className="text-toro-gold font-semibold">Ready to grow your business?</p>
                 <p className="text-sm">Let's create consistent sales growth together.</p>
