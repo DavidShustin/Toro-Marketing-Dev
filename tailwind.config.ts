@@ -71,7 +71,7 @@ export default {
         'toro-grey': '#4a4a4a',
         'toro-light': '#f8f8f8',
         'toro-gold': '#976811ff',
-        'toro-gold-light': '#976811ff',
+        'toro-gold-light': '#9c8606ff',
         'toro-gold-dark': '#9c8606ff',
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',

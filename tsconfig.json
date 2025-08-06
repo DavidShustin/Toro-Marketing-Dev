@@ -15,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["marketing-import/src/*"]
     }
   },
   "include": ["src"],

@@ -1,18 +1,18 @@
+import { AlignCenter, AlignCenterVertical } from 'lucide-react';
 import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="footer" className="bg-toro-dark text-toro-light py-12 ps-90px">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mx-auto">
+    <footer id="footer" className="bg-toro-dark text-toro-light py-12 ps-90px style={AlignCenterVertical}">
+      <div className="container mx-auto flex flex-col">
+        <div className="grid md:grid-cols-3 gap-8 w-full align-items:.center justify-items-center items-center">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
                 src="https://d64gsuwffb70l.cloudfront.net/68436cb49f05d486fb67687f_1753122568533_4b693e69.png" 
                 alt="Toro Marketing Logo" 
-                className="w-8 h-8 object-contain"
+                className="w-15 h-15 object-contain ps-16"
               />
-              <span className="text-xl font-bold text-toro-gold">TORO MARKETING</span>
             </div>
             
           </div>

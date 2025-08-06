@@ -2,6 +2,8 @@ import React from "react";
 import clsx from "clsx";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import bgImage from "@/assets/togo.png";
+
 
 interface NavigationProps {
   className?: string;
@@ -28,13 +30,17 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <img 
-              src="https://d64gsuwffb70l.cloudfront.net/68436cb49f05d486fb67687f_1753122568533_4b693e69.png" 
+              src={bgImage}
               alt="Toro Marketing Logo" 
               className="w-14 h-14 object-contain"
             />
-            <div>
-              <span className="text-xl font-bold text-toro-gold">TORO</span>
-              <span className="text-sm font-semibold text-toro-dark ml-1">MARKETING</span>
+            <div className="flex flex-col justify-center">
+              <span className="text-xl font-bold text-toro-gold leading-tight">
+                TORO
+              </span>
+              <span className="text-sm font-semibold text-toro-dark">
+                MARKETING
+              </span>
             </div>
           </Link>
           
