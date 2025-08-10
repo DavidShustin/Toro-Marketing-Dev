@@ -10,11 +10,11 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23d4af37%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
       </div>
-      
+
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold text-toro-light mb-6">
           TORO
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-toro-gold to-toro-gold-light">
+          <span className="block text-[#C9A449]">
             MARKETING
           </span>
         </h1>
@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/marketing">
-            <Button size="lg" className="bg-toro-gold hover:bg-toro-gold-dark text-toro-dark font-semibold px-8 py-3">
+            <Button size="lg" className="btn-gold text-toro-dark font-semibold px-8 py-3">
               Explore Our Services
             </Button>
           </Link>

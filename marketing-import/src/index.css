@@ -100,6 +100,25 @@
   }
 }
 
+@layer components {
+  /* Solid gold button: dark by default → darker on hover */
+  .btn-gold {
+    @apply bg-toro-gold text-toro-dark font-semibold transition-colors duration-200;
+  }
+  .btn-gold:hover {
+    @apply bg-toro-gold-darker;
+  }
+
+  /* Optional outline variant (unchanged) */
+  .btn-gold-outline {
+    @apply border border-toro-gold text-toro-gold transition-colors duration-200;
+  }
+  .btn-gold-outline:hover {
+    @apply bg-toro-gold text-toro-dark;
+  }
+}
+
+
 .markdown-editor {
   @apply font-mono text-base leading-relaxed;
 }

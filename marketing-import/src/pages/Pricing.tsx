@@ -55,7 +55,7 @@ const Pricing: React.FC = () => {
                   <p className="text-toro-grey text-sm mb-6 leading-relaxed">
                     This package is designed for small businesses with modest budgets and limited capacity to handle high lead volume. It provides an initial basic exposure campaign while preparing you for the increased lead flows — ideal for businesses that need a light, progressive and controlled flow of inquiries rather than sharp immediate growth.
                   </p>
-                  <Button className="w-full bg-toro-gold hover:bg-toro-gold/90 text-toro-dark font-semibold">
+                  <Button className="w-full btn-gold text-toro-dark font-semibold">
                     Get Started
                   </Button>
                 </CardContent>
@@ -71,7 +71,7 @@ const Pricing: React.FC = () => {
                   <p className="text-toro-grey text-sm mb-6 leading-relaxed">
                     Recommended for businesses looking to increase visibility, generate a steady stream of leads, and grow confidently within their market. With more flexibility in budget and targeting, it supports consistent performance without stretching your internal capacity too quickly. It's ideal for brands ready to elevate their presence while maintaining control over their pace of growth.
                   </p>
-                  <Button className="w-full bg-toro-gold hover:bg-toro-gold/90 text-toro-dark font-semibold">
+                  <Button className="w-full btn-gold text-toro-dark font-semibold">
                     Get Started
                   </Button>
                 </CardContent>
@@ -86,7 +86,7 @@ const Pricing: React.FC = () => {
                   <p className="text-toro-grey text-sm mb-6 leading-relaxed">
                     Designed for businesses ready to lead, not just compete. The Platinum Package delivers unmatched visibility, consistent brand dominance, and high-impact reach across every major platform. With maximum ad frequency and strategic volume, your brand stays top-of-mind wherever your audience scrolls. This package is built for companies with the capacity, confidence, and ambition to scale fast and own their market.
                   </p>
-                  <Button className="w-full bg-toro-gold hover:bg-toro-gold/90 text-toro-dark font-semibold">
+                  <Button className="w-full btn-gold text-toro-dark font-semibold">
                     Get Started
                   </Button>
                 </CardContent>

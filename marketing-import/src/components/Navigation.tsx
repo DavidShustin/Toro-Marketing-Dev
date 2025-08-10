@@ -82,7 +82,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
           
           <Button 
             onClick={scrollToFooter}
-            className="bg-toro-gold hover:bg-toro-gold-dark text-toro-dark font-semibold"
+            className="btn-gold text-toro-dark font-semibold"
           >
             Contact Us
           </Button>

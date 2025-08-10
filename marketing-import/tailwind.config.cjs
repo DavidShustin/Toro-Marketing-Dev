@@ -48,8 +48,11 @@ module.exports = {
 
         // Your Toro‑brand colors:
         'toro-dark':  '#2d2d2d',
-        'toro-light': '#f8f8f8',
+        'toro-light': '#f8f8f8ff',
         'toro-gold':  '#976811ff',
+        'toro-gold-dark':  '#7A520E',  // a bit darker
+        'toro-gold-darker':'#5E3F0A',  // hover target (deeper)   
+        'toro-gold-light': '#E5C76E',
         // …etc…
       },
     },

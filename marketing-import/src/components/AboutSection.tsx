@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
             We are a dynamic marketing agency dedicated to helping businesses grow through innovative strategies, creative solutions, and data-driven results.
           </p>
           <Link to="/about">
-            <Button className="bg-toro-gold hover:bg-toro-gold-dark text-toro-dark font-semibold">
+            <Button className="btn-gold text-toro-dark font-semibold">
               Learn More About Us
             </Button>
           </Link>

@@ -15,7 +15,7 @@ const ServicesSection: React.FC = () => {
             Comprehensive marketing solutions designed to grow your business and maximize your ROI.
           </p>
           <Link to="/marketing">
-            <Button className="bg-toro-gold hover:bg-toro-gold-dark text-toro-dark font-semibold">
+            <Button className="btn-gold text-toro-dark font-semibold">
               View All Services
             </Button>
           </Link>

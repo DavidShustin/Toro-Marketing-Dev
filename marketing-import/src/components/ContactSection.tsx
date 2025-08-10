@@ -23,7 +23,7 @@ const ContactSection: React.FC = () => {
                 <p className="text-toro-light/80 mb-6">
                   Schedule a free consultation to discuss your marketing needs and discover how Toro Marketing can help your business thrive.
                 </p>
-                <Button size="lg" className="bg-toro-gold hover:bg-toro-gold-dark text-toro-dark font-semibold px-8 py-3">
+                <Button size="lg" className="btn-gold text-toro-dark font-semibold px-8 py-3">
                   Schedule Consultation
                 </Button>
               </div>
