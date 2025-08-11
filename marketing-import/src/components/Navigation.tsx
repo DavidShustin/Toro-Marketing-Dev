@@ -11,27 +11,27 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const location = useLocation();
-  
+
   const scrollToFooter = () => {
     const footer = document.getElementById("footer");
     if (footer) {
       footer.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   return (
     <nav
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 bg-toro-light/90 backdrop-blur-md border-b border-toro-grey/20",
+        "fixed top-0 left-0 right-0 z-50 bg-toro-light/90 backdrop-blur-md border-b border-toro-grey/20 text-toro-dark",
         className
       )}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <img 
+            <img
               src={bgImage}
-              alt="Toro Marketing Logo" 
+              alt="Toro Marketing Logo"
               className="w-14 h-14 object-contain"
             />
             <div className="flex flex-col justify-center">
@@ -43,10 +43,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </span>
             </div>
           </Link>
-          
+
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/marketing" 
+            <Link
+              to="/marketing"
               className={clsx(
                 "transition-colors",
                 location.pathname === "/marketing"
@@ -56,8 +56,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             >
               Marketing
             </Link>
-            <Link 
-              to="/pricing" 
+            <Link
+              to="/pricing"
               className={clsx(
                 "transition-colors",
                 location.pathname === "/pricing"
@@ -67,8 +67,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             >
               Pricing
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={clsx(
                 "transition-colors",
                 location.pathname === "/about"
@@ -79,11 +79,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               About Us
             </Link>
           </div>
-          
-          <Button 
-            onClick={scrollToFooter}
-            className="btn-gold text-toro-dark font-semibold"
-          >
+
+          <Button onClick={scrollToFooter}
+            className="btn-gold text-toro-dark hover:bg-toro-gold font-semibold px-8 py-3">
             Contact Us
           </Button>
         </div>

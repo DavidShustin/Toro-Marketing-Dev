@@ -4,9 +4,9 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const ContactSection: React.FC = () => {
   return (
-    <section className="py-20 bg-toro-dark">
+    <section className="py-8 bg-toro-dark">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-toro-light mb-6">
             Ready to <span className="text-toro-gold">Get Started?</span>
           </h2>
@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </section>
   );

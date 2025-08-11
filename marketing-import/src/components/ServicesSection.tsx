@@ -14,11 +14,6 @@ const ServicesSection: React.FC = () => {
           <p className="text-xl text-toro-grey max-w-3xl mx-auto mb-8">
             Comprehensive marketing solutions designed to grow your business and maximize your ROI.
           </p>
-          <Link to="/marketing">
-            <Button className="btn-gold text-toro-dark font-semibold">
-              View All Services
-            </Button>
-          </Link>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -23,12 +23,15 @@ const HeroSection: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/marketing">
-            <Button size="lg" className="btn-gold text-toro-dark font-semibold px-8 py-3">
+            <Button size="lg" className="btn-gold text-toro-dark hover:bg-toro-gold font-semibold px-8 py-3">
               Explore Our Services
             </Button>
           </Link>
           <Link to="/about">
-            <Button size="lg" variant="outline" className="border-toro-gold text-toro-gold hover:bg-toro-gold hover:text-toro-dark px-8 py-3">
+            <Button
+              size="lg"
+              className="border border-toro-gold bg-white text-toro-gold hover:bg-toro-gold hover:text-toro-dark font-semibold px-8 py-3 transition-colors duration-300"
+            >
               Learn About Us
             </Button>
           </Link>

@@ -10,14 +10,23 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+
+        // 💛 Toro – outline button (white → gold)
+        goldOutline:
+          "bg-white border border-toro-gold text-toro-gold " +
+          "hover:bg-toro-gold hover:text-toro-dark hover:border-toro-gold " +
+          "focus-visible:ring-0 focus-visible:ring-offset-0 shadow-none",
+
+        // 💛 Toro – solid gold button
+        gold:
+          "bg-toro-gold text-toro-dark border border-toro-gold " +
+          "hover:bg-toro-gold-light hover:border-toro-gold-light " +
+          "focus-visible:ring-0 focus-visible:ring-offset-0 shadow-none",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -35,7 +44,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
 
