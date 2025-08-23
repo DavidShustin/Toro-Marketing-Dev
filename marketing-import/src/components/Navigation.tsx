@@ -1,23 +1,22 @@
 import React from "react";
 import clsx from "clsx";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import bgImage from "@/assets/togo.png";
-
 
 interface NavigationProps {
   className?: string;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
-  const scrollToFooter = () => {
-    const footer = document.getElementById("footer");
-    if (footer) {
-      footer.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // Treat both "/" and "/marketing" as the Marketing (home) page for active styling
+  const marketingActive = pathname === "/" || pathname === "/marketing";
+
+  const linkBase = "transition-colors";
+  const active = "text-toro-gold font-semibold";
+  const inactive = "text-toro-grey hover:text-toro-gold";
 
   return (
     <nav
@@ -28,61 +27,45 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
+          {/* Logo → Home (Marketing) */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <img
-              src={bgImage}
-              alt="Toro Marketing Logo"
-              className="w-14 h-14 object-contain"
-            />
+            <img src={bgImage} alt="Toro Marketing Logo" className="w-14 h-14 object-contain" />
             <div className="flex flex-col justify-center">
-              <span className="text-xl font-bold text-toro-gold leading-tight">
-                TORO
-              </span>
-              <span className="text-sm font-semibold text-toro-dark">
-                MARKETING
-              </span>
+              <span className="text-xl font-bold text-toro-gold leading-tight">TORO</span>
+              <span className="text-sm font-semibold text-toro-dark">MARKETING</span>
             </div>
           </Link>
 
+          {/* Nav links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/marketing"
-              className={clsx(
-                "transition-colors",
-                location.pathname === "/marketing"
-                  ? "text-toro-gold font-semibold"
-                  : "text-toro-grey hover:text-toro-gold"
-              )}
+            {/* Marketing = Home (highlight for "/" AND "/marketing") */}
+            <NavLink
+              to="/"
+              end
+              aria-current={marketingActive ? "page" : undefined}
+              className={clsx(linkBase, marketingActive ? active : inactive)}
             >
               Marketing
-            </Link>
-            <Link
+            </NavLink>
+
+            <NavLink
               to="/pricing"
-              className={clsx(
-                "transition-colors",
-                location.pathname === "/pricing"
-                  ? "text-toro-gold font-semibold"
-                  : "text-toro-grey hover:text-toro-gold"
-              )}
+              className={({ isActive }) => clsx(linkBase, isActive ? active : inactive)}
             >
               Pricing
-            </Link>
-            <Link
+            </NavLink>
+
+            <NavLink
               to="/about"
-              className={clsx(
-                "transition-colors",
-                location.pathname === "/about"
-                  ? "text-toro-gold font-semibold"
-                  : "text-toro-grey hover:text-toro-gold"
-              )}
+              className={({ isActive }) => clsx(linkBase, isActive ? active : inactive)}
             >
               About Us
-            </Link>
+            </NavLink>
           </div>
 
-          <Button onClick={scrollToFooter}
-            className="btn-gold text-toro-dark hover:bg-toro-gold font-semibold px-8 py-3">
-            Contact Us
+          {/* Contact button → /contact page */}
+          <Button asChild variant="gold" className="text-toro-dark font-semibold px-8 py-3">
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
       </div>

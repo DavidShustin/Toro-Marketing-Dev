@@ -1,36 +1,97 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-const ContactSection: React.FC = () => {
+type Size = "normal" | "compact";
+type Variant = "light" | "dark";
+
+interface Props {
+  variant?: Variant;  // "light" (default) or "dark"
+  size?: Size;        // "normal" (default) or "compact"
+  embed?: boolean;    // render only the card, without outer <section>
+  className?: string;
+}
+
+const ContactSection: React.FC<Props> = ({
+  variant = "light",
+  size = "normal",
+  embed = false,
+  className,
+}) => {
+  const isDark = variant === "dark";
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const body = encodeURIComponent(
+      [
+        `Name: ${fd.get("name") || "-"}`,
+        `Business: ${fd.get("business") || "-"}`,
+        `Email: ${fd.get("email") || "-"}`,
+        `Phone: ${fd.get("phone") || "-"}`,
+        "",
+        "How can we help?",
+        fd.get("message") || "-",
+      ].join("\n")
+    );
+    const subject = encodeURIComponent("New Inquiry — TORO");
+    window.location.href = `mailto:kyle@toro-marketing.com?subject=${subject}&body=${body}`;
+    e.currentTarget.reset();
+  };
+
+  // compact tweaks
+  const headerPad = size === "compact" ? "p-5" : "p-6";
+  const contentPad = size === "compact" ? "p-5 pt-0" : "p-6 pt-0";
+  const gap = size === "compact" ? "gap-3" : "gap-4";
+  const controlH = size === "compact" ? "h-10" : "h-11";
+  const rows = size === "compact" ? 4 : 5;
+
+  const cardStyle = isDark
+    ? "rounded-2xl border border-white/15 bg-white/5 text-white"
+    : "rounded-2xl border border-toro-gold/20 bg-white text-toro-dark";
+
+  const inputBase = `${controlH} rounded-md px-3`;
+  const inputCls = isDark
+    ? `${inputBase} border border-white/15 bg-white/10 text-white placeholder-white/60`
+    : `${inputBase} border border-toro-gold/20 bg-white text-toro-dark placeholder-toro-grey`;
+
+  const textareaCls = isDark
+    ? "rounded-md border border-white/15 bg-white/10 text-white placeholder-white/60 p-3"
+    : "rounded-md border border-toro-gold/20 bg-white text-toro-dark placeholder-toro-grey p-3";
+
+  const CardUI = (
+    <div className={className}>
+      <Card className={cardStyle}>
+        <CardHeader className={headerPad}>
+          <CardTitle className="text-xl md:text-2xl">📬 Contact Our Team</CardTitle>
+        </CardHeader>
+        <CardContent className={contentPad}>
+          <form onSubmit={handleSubmit} className={`grid ${gap}`}>
+            <div className={`grid ${gap} md:grid-cols-2`}>
+              <input name="name" placeholder="Name" className={inputCls} required />
+              <input name="business" placeholder="Business Name" className={inputCls} />
+            </div>
+            <div className={`grid ${gap} md:grid-cols-2`}>
+              <input name="email" type="email" placeholder="Email" className={inputCls} required />
+              <input name="phone" placeholder="Phone Number (Optional)" className={inputCls} />
+            </div>
+            <textarea name="message" placeholder="How can we help?" rows={rows} className={textareaCls} />
+            <div className="text-center">
+              <Button type="submit" variant="gold" className="px-6 py-3 font-semibold">
+                🚀 Submit Inquiry
+              </Button>
+            </div>
+          </form>
+        </CardContent>
+      </Card>
+    </div>
+  );
+
+  if (embed) return CardUI;
+
   return (
-    <section className="py-8 bg-toro-dark">
-      <div className="container mx-auto px-4">
-        {/* <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-toro-light mb-6">
-            Ready to <span className="text-toro-gold">Get Started?</span>
-          </h2>
-          <p className="text-xl text-toro-light/80 max-w-3xl mx-auto mb-8">
-            Contact Toro Marketing today and let's discuss how we can help grow your business.
-          </p>
-        </div>
-        
-        <div className="max-w-2xl mx-auto">
-          <Card className="bg-toro-grey border-toro-gold/20">
-            <CardContent className="p-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-toro-light mb-4">Get Your Free Consultation</h3>
-                <p className="text-toro-light/80 mb-6">
-                  Schedule a free consultation to discuss your marketing needs and discover how Toro Marketing can help your business thrive.
-                </p>
-                <Button size="lg" className="btn-gold text-toro-dark font-semibold px-8 py-3">
-                  Schedule Consultation
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div> */}
-      </div>
+    <section id="contact" className={`px-4 ${size === "compact" ? "py-12" : "py-16"}`}>
+      <div className="container mx-auto max-w-3xl">{CardUI}</div>
     </section>
   );
 };

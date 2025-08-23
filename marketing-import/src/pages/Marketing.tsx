@@ -169,10 +169,7 @@ const Marketing: React.FC = () => {
                 <p>You know your market. We know how to grow it.</p>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button variant="gold" onClick={scrollToContact}>
-                  Let’s Talk
-                </Button>
-                <Link to="/marketing#phases">
+                <Link to="/pricing">
                   <Button variant="goldOutline">See the plan</Button>
                 </Link>
               </div>
@@ -606,24 +603,48 @@ const Marketing: React.FC = () => {
         {/* =========================== */}
         {/* CONTACT FORM (anchor)       */}
         {/* =========================== */}
-        <section id="contact" className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-3xl">
+        <section id="contact" className="py-12 px-4 bg-white">
+          <div className="container mx-auto max-w-2xl">
             <Card className="rounded-2xl border-toro-gold/20">
-              <CardHeader>
-                <CardTitle className="text-2xl">📬 Contact Our Team</CardTitle>
+              <CardHeader className="p-5">
+                <CardTitle className="text-xl md:text-2xl">📬 Contact Our Team</CardTitle>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleContactSubmit} className="grid gap-4">
-                  <div className="grid gap-2 md:grid-cols-2">
-                    <input name="name" placeholder="Name" className="h-11 rounded-md border border-toro-gold/20 px-3" required />
-                    <input name="business" placeholder="Business Name" className="h-11 rounded-md border border-toro-gold/20 px-3" />
+              <CardContent className="p-5 pt-0">
+                <form onSubmit={handleContactSubmit} className="grid gap-3">
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <input
+                      name="name"
+                      placeholder="Name"
+                      className="h-10 rounded-md border border-toro-gold/20 px-3"
+                      required
+                    />
+                    <input
+                      name="business"
+                      placeholder="Business Name"
+                      className="h-10 rounded-md border border-toro-gold/20 px-3"
+                    />
                   </div>
-                  <div className="grid gap-2 md:grid-cols-2">
-                    <input name="email" type="email" placeholder="Email" className="h-11 rounded-md border border-toro-gold/20 px-3" required />
-                    <input name="phone" placeholder="Phone Number (Optional)" className="h-11 rounded-md border border-toro-gold/20 px-3" />
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <input
+                      name="email"
+                      type="email"
+                      placeholder="Email"
+                      className="h-10 rounded-md border border-toro-gold/20 px-3"
+                      required
+                    />
+                    <input
+                      name="phone"
+                      placeholder="Phone Number (Optional)"
+                      className="h-10 rounded-md border border-toro-gold/20 px-3"
+                    />
                   </div>
-                  <textarea name="message" placeholder="How can we help?" rows={5} className="rounded-md border border-toro-gold/20 p-3" />
-                  <div>
+                  <textarea
+                    name="message"
+                    placeholder="How can we help?"
+                    rows={4}
+                    className="rounded-md border border-toro-gold/20 p-3"
+                  />
+                  <div className="text-center">
                     <Button type="submit" variant="gold" className="px-6 py-3 font-semibold">
                       🚀 Submit Inquiry
                     </Button>
