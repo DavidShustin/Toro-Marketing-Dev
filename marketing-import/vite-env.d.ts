@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import { fileURLToPath, URL } from "node:url";
+/// <reference types="vite/client" />
 
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
-  },
-});
+interface ImportMetaEnv {
+  readonly VITE_CALENDLY_URL?: string;
+  readonly BASE_URL?: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}

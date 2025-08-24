@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <img
               src={footerLogo}
               alt="Toro Marketing Logo"
-              className="h-[150px] w-auto object-contain"
+              className="h-[150px] w-auto object-contain mt-2 md:mt-3"
             />
           </div>
 

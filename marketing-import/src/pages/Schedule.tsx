@@ -5,7 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { InlineWidget } from "react-calendly";
 
 const Schedule: React.FC = () => {
-    const bookingUrl = import.meta.env.VITE_CALENDLY_URL || "https://calendly.com/your-handle/intro-call-15";
+    // Reads from .env (marketing-import/.env). Falls back to your live link just in case.
+    const bookingUrl =
+        import.meta.env.VITE_CALENDLY_URL || "https://calendly.com/kyle-toro-marketing/60min";
 
     return (
         <div className="min-h-screen bg-white text-toro-dark">
