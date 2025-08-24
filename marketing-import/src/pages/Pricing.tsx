@@ -19,7 +19,7 @@ const Pricing: React.FC = () => {
         `Phone: ${fd.get("phone") || "-"}`,
         "",
         "How can we help?",
-        fd.get("message") || "-",
+        (fd.get("message") as string) || "-",
       ].join("\n")
     );
     const subject = encodeURIComponent("New Inquiry — Pricing Page");
@@ -67,8 +67,7 @@ const Pricing: React.FC = () => {
         {/* ============ ROI + WHAT INFLUENCES (LIGHT) ============ */}
         <section className="bg-white">
           <div className="container mx-auto max-w-7xl px-4 py-16">
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-              {/* ROI */}
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 items-stretch">              {/* ROI */}
               <Card className="h-full rounded-2xl border-toro-gold/25">
                 <CardHeader>
                   <CardTitle className="text-2xl text-toro-gold">🎯 Our Focus: ROI, Not Activity</CardTitle>
@@ -110,7 +109,8 @@ const Pricing: React.FC = () => {
                     <li>• The level of scale you're ready for</li>
                   </ul>
                   <p className="pt-1">
-                    Once we understand your goals, we’ll present a tailored plan—one that’s aligned with your targets and built to get results.
+                    Once we understand your goals, we’ll present a tailored plan—one that’s aligned with your targets and
+                    built to get results.
                   </p>
                 </CardContent>
               </Card>
@@ -122,12 +122,12 @@ const Pricing: React.FC = () => {
         <section className="bg-toro-dark text-toro-light">
           <div className="container mx-auto max-w-7xl px-4 py-20">
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-
               {/* LEFT: Who We Work Best With */}
               <div className="h-full min-h-[28rem] md:min-h-[32rem] rounded-2xl border border-white/15 bg-white/5 backdrop-blur-sm p-10 md:p-12 flex flex-col">
-                <h2 className="text-3xl font-bold mb-6">🤝 Who We Work Best With</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center">🤝 Who We Work Best With</h2>
                 <p className="text-toro-light/90 mb-5">
-                  TORO is built for growth-minded business owners who are serious about leveling up their brand, presence, and performance.
+                  TORO is built for growth-minded business owners who are serious about leveling up their brand,
+                  presence, and performance.
                 </p>
                 <p className="text-toro-light/90 mb-4 font-medium">You’re a strong fit if:</p>
 
@@ -146,19 +146,6 @@ const Pricing: React.FC = () => {
                       <span className="text-toro-light/90">{t}</span>
                     </div>
                   ))}
-                </div>
-
-                <div className="mt-auto pt-8 flex flex-wrap justify-center gap-3 text-center">
-                  <Link to="/schedule" className="w-full sm:w-auto">
-                    <Button variant="gold" className="w-full sm:w-auto px-8 py-3 font-semibold">
-                      📅 Book a Strategy Call
-                    </Button>
-                  </Link>
-                  <Link to="/contact" className="w-full sm:w-auto">
-                    <Button variant="goldOutline" className="w-full sm:w-auto px-8 py-3 font-semibold">
-                      📩 Contact Our Team
-                    </Button>
-                  </Link>
                 </div>
               </div>
 
@@ -187,11 +174,14 @@ const Pricing: React.FC = () => {
                 <p className="text-white/70 mt-6">
                   Let’s turn your reputation into revenue—and your marketing into your most valuable asset.
                 </p>
+              </div>
 
-                <div className="mt-auto pt-8 flex flex-wrap justify-center gap-3">
+              {/* ✅ CTA row aligned with cards */}
+              <div className="md:col-span-2 md:justify-self-center">
+                <div className="w-fit mx-auto -mt-3 md:-mt-4 pt-5 flex items-center justify-center gap-10 -translate-x-2">
                   <Link to="/schedule" className="w-full sm:w-auto">
                     <Button variant="gold" className="w-full sm:w-auto px-8 py-3 font-semibold">
-                      📞 Book a Strategy Call
+                      📅 Book a Strategy Call
                     </Button>
                   </Link>
                   <Link to="/contact" className="w-full sm:w-auto">
@@ -215,38 +205,14 @@ const Pricing: React.FC = () => {
               <CardContent className="p-5 pt-0">
                 <form onSubmit={handleContactSubmit} className="grid gap-3">
                   <div className="grid gap-3 md:grid-cols-2">
-                    <input
-                      name="name"
-                      placeholder="Name"
-                      className="h-10 rounded-md border border-toro-gold/20 px-3"
-                      required
-                    />
-                    <input
-                      name="business"
-                      placeholder="Business Name"
-                      className="h-10 rounded-md border border-toro-gold/20 px-3"
-                    />
+                    <input name="name" placeholder="Name" className="h-10 rounded-md border border-toro-gold/20 px-3" required />
+                    <input name="business" placeholder="Business Name" className="h-10 rounded-md border border-toro-gold/20 px-3" />
                   </div>
                   <div className="grid gap-3 md:grid-cols-2">
-                    <input
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                      className="h-10 rounded-md border border-toro-gold/20 px-3"
-                      required
-                    />
-                    <input
-                      name="phone"
-                      placeholder="Phone Number (Optional)"
-                      className="h-10 rounded-md border border-toro-gold/20 px-3"
-                    />
+                    <input name="email" type="email" placeholder="Email" className="h-10 rounded-md border border-toro-gold/20 px-3" required />
+                    <input name="phone" placeholder="Phone Number (Optional)" className="h-10 rounded-md border border-toro-gold/20 px-3" />
                   </div>
-                  <textarea
-                    name="message"
-                    placeholder="How can we help?"
-                    rows={4}
-                    className="rounded-md border border-toro-gold/20 p-3"
-                  />
+                  <textarea name="message" placeholder="How can we help?" rows={4} className="rounded-md border border-toro-gold/20 p-3" />
                   <div className="text-center">
                     <Button type="submit" variant="gold" className="px-6 py-3 font-semibold">
                       🚀 Submit Inquiry

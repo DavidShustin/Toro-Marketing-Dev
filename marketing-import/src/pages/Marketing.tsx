@@ -92,9 +92,7 @@ const Marketing: React.FC = () => {
 
           {/* Content */}
           <div className="relative z-10 container mx-auto px-6 py-20 md:py-28 flex h-full flex-col items-center justify-center text-center text-white">
-            <span className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs tracking-wide">
-              TORO MARKETING
-            </span>
+
 
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight [text-wrap:balance] max-w-5xl">
               <span className="text-white">Your Reputation Built Your Business.</span>
@@ -419,11 +417,6 @@ const Marketing: React.FC = () => {
                 We don’t believe in filler content, fake results, or phoning it in. We build marketing that drives
                 attention, builds demand, and brings you real clients. If your business isn’t growing, we’re not doing our job.
               </p>
-              <div className="mt-4">
-                <Link to="/contact">
-                  <Button variant="gold">📞 Book a Strategy Call</Button>
-                </Link>
-              </div>
             </div>
           </div>
         </section>
@@ -561,6 +554,20 @@ const Marketing: React.FC = () => {
               </ul>
             </div>
 
+            <div className="mt-16 md:mt-20 border-t border-white/10" />
+
+        {/* =========================== */}
+        {/* LET'S DOUBLE YOUR BUSINESS  */}
+        {/* =========================== */}
+            <div className="pt-10 md:pt-12 text-center">
+              <h3 className="text-3xl font-bold">📣 Let’s Double Your Business</h3>
+              <p className="mt-4 max-w-3xl mx-auto text-white/75">
+                You’ve done the hard part—built a great reputation, delivered real value, and kept your clients happy.
+                Now it’s time to turn that into visibility and growth. TORO isn’t just marketing. We’re the partner that
+                helps you go from word-of-mouth to widely known.
+              </p>
+            </div>
+
             <div className="mt-10 text-center">
               <div className="inline-flex flex-wrap items-center justify-center gap-3">
                 <Link to="/pricing">
@@ -579,27 +586,7 @@ const Marketing: React.FC = () => {
         {/* =========================== */}
         {/* LET'S DOUBLE YOUR BUSINESS  */}
         {/* =========================== */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h3 className="text-3xl font-bold">📣 Let’s Double Your Business</h3>
-            <p className="mt-4 text-toro-grey">
-              You’ve done the hard part—built a great reputation, delivered real value, and kept your clients happy.
-              Now it’s time to turn that into visibility and growth. TORO isn’t just marketing. We’re the partner that
-              helps you go from word-of-mouth to widely known.
-            </p>
-            <div className="mt-6 flex items-center justify-center gap-3">
-              <Link to="/contact">
-                <Button variant="goldOutline" className="px-8 py-3 font-semibold">
-                  📞 Book a Strategy Call
-                </Button>
-              </Link>
-              <Button variant="gold" className="px-8 py-3 font-semibold" onClick={scrollToContact}>
-                Let’s Talk
-              </Button>
-            </div>
-          </div>
-        </section>
-
+        
         {/* =========================== */}
         {/* CONTACT FORM (anchor)       */}
         {/* =========================== */}

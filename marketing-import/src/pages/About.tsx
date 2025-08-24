@@ -16,6 +16,27 @@ import {
   ChevronDown,
 } from "lucide-react";
 
+// Bigger horizontal arrow used in the Mission flow
+const FlowArrow: React.FC<{ className?: string }> = ({ className = "" }) => (
+  <svg viewBox="0 0 100 12" className={className} aria-hidden="true">
+    <line x1="0" y1="6" x2="86" y2="6" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
+    <polyline
+      points="86,2 100,6 86,10"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const FlowPill: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="rounded-full border border-toro-gold/30 bg-toro-gold/10 px-4 py-1.5 text-sm font-semibold text-toro-gold">
+    {children}
+  </div>
+);
+
 const About: React.FC = () => {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -275,23 +296,16 @@ const About: React.FC = () => {
             <p className="mt-3 text-center text-toro-grey">
               To turn reputation into visibility. To turn visibility into trust. To turn trust into qualified leads, new clients, and serious growth.
             </p>
+            <div className="mt-8 flex flex-nowrap items-center justify-center gap-x-5 md:gap-x-6 overflow-x-auto">
+              <FlowPill>Reputation</FlowPill>
+              <FlowArrow className="text-toro-gold/80 h-5 md:h-6 w-16 md:w-24" />
 
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 items-center gap-4 md:gap-6 text-center">
-              {[
-                "Reputation",
-                "Visibility",
-                "Trust",
-                "Growth",
-              ].map((step, i, arr) => (
-                <div key={step} className="flex items-center justify-center gap-3">
-                  <div className="rounded-full border border-toro-gold/30 bg-toro-gold/10 px-4 py-2 text-sm font-semibold text-toro-gold">
-                    {step}
-                  </div>
-                  {i < arr.length - 1 && (
-                    <MoveRight className="hidden md:block h-5 w-5 text-toro-gold/80" />
-                  )}
-                </div>
-              ))}
+              <FlowPill>Visibility</FlowPill>
+              <FlowArrow className="text-toro-gold/80 h-5 md:h-6 w-16 md:w-24" />
+
+              <FlowPill>Trust</FlowPill>
+              <FlowArrow className="text-toro-gold/80 h-5 md:h-6 w-16 md:w-24" />
+              <FlowPill>Growth</FlowPill>
             </div>
 
             <p className="mt-6 text-center text-toro-grey">
