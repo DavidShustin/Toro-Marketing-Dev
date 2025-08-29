@@ -10,8 +10,6 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const { pathname } = useLocation();
-
-  // Treat both "/" and "/marketing" as the Marketing (home) page for active styling
   const marketingActive = pathname === "/" || pathname === "/marketing";
 
   const linkBase = "transition-colors";
@@ -27,7 +25,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo → Home (Marketing) */}
+          {/* Logo → Marketing (home) */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <img src={bgImage} alt="Toro Marketing Logo" className="w-14 h-14 object-contain" />
             <div className="flex flex-col justify-center">
@@ -38,7 +36,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
           {/* Nav links */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Marketing = Home (highlight for "/" AND "/marketing") */}
             <NavLink
               to="/"
               end
@@ -47,14 +44,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             >
               Marketing
             </NavLink>
-
             <NavLink
               to="/pricing"
               className={({ isActive }) => clsx(linkBase, isActive ? active : inactive)}
             >
               Pricing
             </NavLink>
-
             <NavLink
               to="/about"
               className={({ isActive }) => clsx(linkBase, isActive ? active : inactive)}
@@ -63,9 +58,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             </NavLink>
           </div>
 
-          {/* Contact button → /contact page */}
+          {/* Primary CTA → schedule page */}
           <Button asChild variant="gold" className="text-toro-dark font-semibold px-8 py-3">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/schedule">Book a Call</Link>
           </Button>
         </div>
       </div>

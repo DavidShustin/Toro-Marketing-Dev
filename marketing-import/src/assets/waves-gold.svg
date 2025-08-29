@@ -1,0 +1,23 @@
+<!-- public/assets/waves-gold.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200">
+  <g fill="none">
+    <!-- darker gold lines -->
+    <path d="M0 22 C 140 6, 300 58, 480 22 S 840 6, 1000 22 S 1160 58, 1200 22" stroke="#976811" stroke-width="2.5" opacity=".10"/>
+    <path d="M0 38 C 160 18, 320 78, 520 38 S 880 18, 1040 38 S 1120 78, 1200 38" stroke="#976811" stroke-width="1.5" opacity=".08"/>
+    <path d="M0 55 C 120 35, 260 95, 420 55 S 760 35, 940 55 S 1100 95, 1200 55" stroke="#976811" stroke-width="3" opacity=".06"/>
+    <path d="M0 74 C 180 54, 340 112, 520 74 S 880 54, 1060 74 S 1140 112, 1200 74" stroke="#976811" stroke-width="2" opacity=".08"/>
+    <path d="M0 92 C 150 74, 330 130, 500 92 S 860 74, 1020 92 S 1120 130, 1200 92" stroke="#976811" stroke-width="1.5" opacity=".07"/>
+    <path d="M0 110 C 170 92, 350 148, 560 110 S 900 92, 1080 110 S 1150 148, 1200 110" stroke="#976811" stroke-width="2.5" opacity=".05"/>
+    <path d="M0 128 C 140 112, 320 166, 500 128 S 860 112, 1020 128 S 1140 166, 1200 128" stroke="#976811" stroke-width="2" opacity=".06"/>
+    <!-- lighter gold lines -->
+    <path d="M0 16 C 200 -2, 360 54, 560 16 S 920 -2, 1100 16 S 1160 54, 1200 16" stroke="#E5C76E" stroke-width="1.25" opacity=".10"/>
+    <path d="M0 30 C 100 16, 250 70, 420 30 S 780 16, 960 30 S 1100 70, 1200 30" stroke="#E5C76E" stroke-width="2" opacity=".06"/>
+    <path d="M0 48 C 220 30, 380 104, 580 48 S 940 30, 1120 48 S 1160 104, 1200 48" stroke="#E5C76E" stroke-width="1.5" opacity=".08"/>
+    <path d="M0 66 C 120 54, 280 120, 500 66 S 860 54, 1040 66 S 1120 120, 1200 66" stroke="#E5C76E" stroke-width="2.75" opacity=".05"/>
+    <path d="M0 84 C 190 72, 340 138, 540 84 S 900 72, 1080 84 S 1140 138, 1200 84" stroke="#E5C76E" stroke-width="1.25" opacity=".10"/>
+    <path d="M0 102 C 160 90, 320 156, 520 102 S 880 90, 1060 102 S 1140 156, 1200 102" stroke="#E5C76E" stroke-width="2.25" opacity=".06"/>
+    <!-- a few extras for density -->
+    <path d="M0 146 C 150 132, 320 180, 520 146 S 880 132, 1060 146 S 1140 180, 1200 146" stroke="#976811" stroke-width="2" opacity=".05"/>
+    <path d="M0 166 C 180 152, 350 192, 560 166 S 900 152, 1080 166 S 1150 192, 1200 166" stroke="#E5C76E" stroke-width="1.5" opacity=".07"/>
+  </g>
+</svg>

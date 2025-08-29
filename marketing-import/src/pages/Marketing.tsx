@@ -194,10 +194,19 @@ const Marketing: React.FC = () => {
               </div>
 
               {/* Swap these with real client logos when ready */}
-              <div className="mt-6 grid grid-cols-3 gap-6 opacity-70">
-                <img src="/assets/logo1.svg" alt="Client logo 1" className="h-8 w-auto object-contain" />
-                <img src="/assets/logo2.svg" alt="Client logo 2" className="h-8 w-auto object-contain" />
-                <img src="/assets/logo3.svg" alt="Client logo 3" className="h-8 w-auto object-contain" />
+              <div
+                className="
+    mt-6 max-w-lg mx-auto
+    grid grid-cols-1 gap-y-5
+    [&>img]:h-8 [&>img]:w-auto [&>img]:object-contain [&>img]:opacity-80 hover:[&>img]:opacity-100
+    [&>img:nth-child(odd)]:justify-self-start
+    [&>img:nth-child(even)]:justify-self-end
+  "
+              >
+                <img src="/assets/logo1.svg" alt="Client logo 1" />
+                <img src="/assets/logo2.svg" alt="Client logo 2" />
+                <img src="/assets/logo3.svg" alt="Client logo 3" />
+                <img src="/assets/logo4.svg" alt="Client logo 4" />
               </div>
             </div>
           </div>
@@ -556,9 +565,9 @@ const Marketing: React.FC = () => {
 
             <div className="mt-16 md:mt-20 border-t border-white/10" />
 
-        {/* =========================== */}
-        {/* LET'S DOUBLE YOUR BUSINESS  */}
-        {/* =========================== */}
+            {/* =========================== */}
+            {/* LET'S DOUBLE YOUR BUSINESS  */}
+            {/* =========================== */}
             <div className="pt-10 md:pt-12 text-center">
               <h3 className="text-3xl font-bold">📣 Let’s Double Your Business</h3>
               <p className="mt-4 max-w-3xl mx-auto text-white/75">
@@ -586,11 +595,11 @@ const Marketing: React.FC = () => {
         {/* =========================== */}
         {/* LET'S DOUBLE YOUR BUSINESS  */}
         {/* =========================== */}
-        
+
         {/* =========================== */}
         {/* CONTACT FORM (anchor)       */}
         {/* =========================== */}
-        <section id="contact" className="py-12 px-4 bg-white">
+        {/* <section id="contact" className="py-12 px-4 bg-white">
           <div className="container mx-auto max-w-2xl">
             <Card className="rounded-2xl border-toro-gold/20">
               <CardHeader className="p-5">
@@ -640,7 +649,7 @@ const Marketing: React.FC = () => {
               </CardContent>
             </Card>
           </div>
-        </section>
+        </section> */}
       </main>
 
       {/* Footer wrapper for a subtle white bottom border */}

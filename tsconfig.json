@@ -18,6 +18,6 @@
       "@/*": ["marketing-import/src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "marketing-import/vite-env.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

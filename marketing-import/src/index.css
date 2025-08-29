@@ -1,151 +1,116 @@
-@import url('https://fontsgoogleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+/* Load fonts (fixed URL) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
+/* Tailwind (keep these first) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 248 248 248;
-    --foreground: 45 45 45;
+/* ---------- Site tokens (HSL) ---------- */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 11%;
 
-    --card: 248 248 248;
-    --card-foreground: 45 45 45;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 11%;
 
-    --popover: 248 248 248;
-    --popover-foreground: 45 45 45;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 11%;
 
-    --primary: 42 69% 55%;
-    --primary-foreground: 248 248 248;
+  --primary: 35 80% 33%;
+  --primary-foreground: 0 0% 100%;
 
-    --secondary: 74 74 74;
-    --secondary-foreground: 248 248 248;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 15%;
 
-    --muted: 229 229 229;
-    --muted-foreground: 74 74 74;
+  --muted: 0 0% 94%;
+  --muted-foreground: 0 0% 35%;
 
-    --accent: 42 69% 55%;
-    --accent-foreground: 248 248 248;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 248 248 248;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
 
-    --border: 229 229 229;
-    --input: 229 229 229;
-    --ring: 42 69% 55%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 35 80% 33%;
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 248 248 248;
-    --sidebar-foreground: 45 45 45;
-    --sidebar-primary: 42 69% 55%;
-    --sidebar-primary-foreground: 248 248 248;
-    --sidebar-accent: 229 229 229;
-    --sidebar-accent-foreground: 45 45 45;
-    --sidebar-border: 229 229 229;
-    --sidebar-ring: 42 69% 55%;
-  }
-
-  .dark {
-    --background: 45 45 45;
-    --foreground: 248 248 248;
-
-    --card: 45 45 45;
-    --card-foreground: 248 248 248;
-
-    --popover: 45 45 45;
-    --popover-foreground: 248 248 248;
-
-    --primary: 42 69% 55%;
-    --primary-foreground: 45 45 45;
-
-    --secondary: 74 74 74;
-    --secondary-foreground: 248 248 248;
-
-    --muted: 74 74 74;
-    --muted-foreground: 229 229 229;
-
-    --accent: 42 69% 55%;
-    --accent-foreground: 45 45 45;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 248 248 248;
-
-    --border: 74 74 74;
-    --input: 74 74 74;
-    --ring: 42 69% 55%;
-
-    --sidebar-background: 45 45 45;
-    --sidebar-foreground: 248 248 248;
-    --sidebar-primary: 42 69% 55%;
-    --sidebar-primary-foreground: 45 45 45;
-    --sidebar-accent: 74 74 74;
-    --sidebar-accent-foreground: 248 248 248;
-    --sidebar-border: 74 74 74;
-    --sidebar-ring: 42 69% 55%;
-  }
+  --radius: 0.5rem;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+/* Optional dark tokens */
+.dark {
+  --background: 0 0% 11%;
+  --foreground: 0 0% 100%;
 
-  body {
-    @apply bg-toro-light text-toro-dark font-sans;
-  }
+  --card: 0 0% 11%;
+  --card-foreground: 0 0% 100%;
 
-  pre, code {
-    @apply font-mono;
-  }
+  --popover: 0 0% 11%;
+  --popover-foreground: 0 0% 100%;
+
+  --primary: 35 80% 33%;
+  --primary-foreground: 0 0% 11%;
+
+  --secondary: 0 0% 24%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 0 0% 24%;
+  --muted-foreground: 0 0% 85%;
+
+  --accent: 0 0% 24%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 0 0% 24%;
+  --input: 0 0% 24%;
+  --ring: 35 80% 33%;
 }
 
-@layer components {
-  /* Solid gold button: dark by default → darker on hover */
-  .btn-gold {
-    @apply bg-toro-gold text-toro-dark font-semibold transition-colors duration-200;
-  }
-  .btn-gold:hover {
-    @apply bg-toro-gold-darker;
-  }
+/* ---------- Base element tweaks (no @apply to keep linters happy) ---------- */
+html { scroll-behavior: smooth; }
+body {
+  background-color: #f8f8f8; /* toro-light */
+  color: #2d2d2d;           /* toro-dark  */
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+               'Apple Color Emoji', 'Segoe UI Emoji';
+  overflow-x: hidden;
+}
+pre, code {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+* { border-color: hsl(var(--border)); }
 
-  /* Optional outline variant (unchanged) */
-  .btn-gold-outline {
-    @apply border border-toro-gold text-toro-gold transition-colors duration-200;
-  }
-  .btn-gold-outline:hover {
-    @apply bg-toro-gold text-toro-dark;
-  }
+/* ---------- Gold “random waves” background (data-URI, transparent) ---------- */
+/* Use on any light section: className="bg-white bg-gold-waves-dense" */
+.bg-gold-waves-dense{
+  background-color:#fff;
+  background-repeat:repeat;
+  background-size:800px 160px;
+  /* note DOUBLE quotes around url(...) and the whole SVG on ONE line */
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='160' viewBox='0 0 800 160'><g fill='none'>…paths here…</g></svg>");
 }
 
 
-.markdown-editor {
-  @apply font-mono text-base leading-relaxed;
+.bg-gold-tint {
+  /* tweak if you want it stronger: #fff2d9 or #fff0cc */
+  background-color: #634e18;
 }
 
-.markdown-preview {
-  @apply prose max-w-none prose-blue dark:prose-invert;
+/* Soft gold waves with responsive density */
+.bg-waves-gold-soft{
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(255,255,255,.35), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(151,104,17,.03), rgba(151,104,17,.05)),
+    url('./assets/waves-gold.svg'); /* <-- fix: relative to src/index.css */
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: 100% 100%, 100% 100%, 720px 144px;
+  background-position: center, center, 0 0;
+  background-color: #f3e9cc;
+  background-blend-mode: normal, normal, multiply;
 }
-
-.markdown-preview pre {
-  @apply bg-secondary p-4 rounded-md overflow-x-auto;
-}
-
-.markdown-preview code {
-  @apply text-sm font-mono text-primary;
-}
-
-.markdown-preview h1,
-.markdown-preview h2,
-.markdown-preview h3,
-.markdown-preview h4,
-.markdown-preview h5,
-.markdown-preview h6 {
-  @apply font-sans font-semibold text-foreground;
-}
-
-.markdown-preview ul,
-.markdown-preview ol {
-  @apply my-4 ml-6;
-}
-
+@media (min-width:1024px){ .bg-waves-gold-soft{ background-size:100% 100%,100% 100%,860px 150px } }
+@media (min-width:1536px){ .bg-waves-gold-soft{ background-size:100% 100%,100% 100%,980px 170px } }

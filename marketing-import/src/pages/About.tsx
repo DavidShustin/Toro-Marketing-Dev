@@ -61,7 +61,7 @@ const About: React.FC = () => {
             </span>
 
             <h1 className="mt-5 text-4xl md:text-6xl font-extrabold leading-tight [text-wrap:balance]">
-              We’re Not a Marketing Agency.
+              We’re Not Just a Marketing Agency.
               <br className="hidden md:block" />
               We’re the Growth Partner You’ve Been Missing.
             </h1>
@@ -92,7 +92,7 @@ const About: React.FC = () => {
       </div>
 
       {/* ====== “Let’s be real.” (split layout, emphasis) ====== */}
-      <section id="real" className="py-16 md:py-20 px-6 bg-white">
+      <section id="real" className="py-16 md:py-20 px-6 bg-white bg-gold-waves-dense">
         <div className="container mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.25fr,0.75fr] items-start">
           {/* Left: the full copy, intact */}
           <article className="prose prose-neutral max-w-none md:prose-lg">
