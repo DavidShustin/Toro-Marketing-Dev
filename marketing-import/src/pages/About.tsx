@@ -95,7 +95,7 @@ const About: React.FC = () => {
       </div>
 
       {/* ====== “Let’s be real.” (split layout, emphasis) ====== */}
-      <section id="real" className="py-16 md:py-20 px-6 bg-waves-gold-soft text-toro-dark">
+      <section id="real" className="scroll-mt-24 py-16 md:py-20 px-6 bg-waves-gold-soft text-toro-dark">
         <div className="container mx-auto max-w-6xl">
           <div className="rounded-2xl border border-toro-gold/20 bg-white/95 shadow-sm p-6 md:p-10">
             <div className="grid gap-10 md:grid-cols-[1.25fr,0.75fr] items-start">

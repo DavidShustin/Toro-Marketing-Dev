@@ -148,8 +148,8 @@ const Marketing: React.FC = () => {
 
             {/* Scroll cue */}
             <button
-              onClick={() => document.getElementById("positioning")?.scrollIntoView({ behavior: "smooth" })}
-              className="mt-8 hidden md:inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 p-2 hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-toro-gold/50"
+              onClick={() => document.getElementById("positioning")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              className="mt-8 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 p-2 hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-toro-gold/50"
               aria-label="Scroll to next section"
             >
               <ChevronDown className="h-5 w-5" />
@@ -161,7 +161,7 @@ const Marketing: React.FC = () => {
         {/* POST-HERO COPY BLOCK        */}
         {/* =========================== */}
         {/* ===== Combined section (one background) ===== */}
-        <section className="bg-waves-gold-soft text-toro-dark">
+        <section id="positioning" className="scroll-mt-24 bg-waves-gold-soft text-toro-dark">
           <div className="container mx-auto max-w-6xl px-6 py-16 space-y-12 md:space-y-16">
 
             {/* Block A: Intro card + trust logos */}
