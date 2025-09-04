@@ -13,11 +13,11 @@ const Schedule: React.FC = () => {
         <div className="min-h-screen bg-white text-toro-dark">
             <Navigation />
             <main className="pt-16">
-                <section className="py-16 px-4">
+                <section className="py-16 px-4 bg-waves-gold-soft text-toro-dark">
                     <div className="container mx-auto max-w-5xl">
-                        <Card className="rounded-2xl border-toro-gold/20">
+                        <Card className="rounded-2xl border-toro-gold/20 bg-toro-dark text-white">
                             <CardHeader className="text-center">
-                                <CardTitle className="text-3xl font-bold">📅 Schedule a Call</CardTitle>
+                                <CardTitle className="text-3xl font-bold text-light">📅 Schedule a Call</CardTitle>
                                 <p className="text-toro-grey">Pick a time that works for you—calendar invite is automatic.</p>
                             </CardHeader>
                             <CardContent>
