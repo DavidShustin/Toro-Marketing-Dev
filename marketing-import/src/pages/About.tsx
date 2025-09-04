@@ -70,11 +70,11 @@ const About: React.FC = () => {
             </h1>
 
             <p className="mx-auto mt-5 max-w-3xl text-white/85 text-lg md:text-xl">
-              Most agencies check boxes and call it strategy. TORO ends the fluff and builds marketing that actually moves the needle.
+              Most agencies check boxes and call it strategy. Toro Marketing ends the fluff and builds marketing that actually moves the needle.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link to="/schedule">
+              <Link to="/schedul">
                 <Button variant="gold" className="px-7 py-3 font-semibold">📞 Book a Strategy Call</Button>
               </Link>
               <Link to="/pricing">
@@ -113,7 +113,7 @@ const About: React.FC = () => {
 
                 {/* highlighted pull-quote */}
                 <div className="my-6 rounded-xl border-l-4 border-toro-gold/70 bg-toro-gold/[0.06] p-4">
-                  <p className="m-0 font-semibold text-toro-dark">That’s exactly why TORO exists.</p>
+                  <p className="m-0 font-semibold text-toro-dark">That’s exactly why Toro Marketing exists.</p>
                   <p className="m-0 text-toro-dark/85">
                     We’re here to end the fluff and build marketing that actually moves the needle.
                   </p>
@@ -177,7 +177,7 @@ const About: React.FC = () => {
               <div className="grid items-start gap-8 md:grid-cols-[1.4fr_auto_1fr]">
                 {/* Left column — unchanged copy */}
                 <div className="leading-relaxed space-y-3 text-white/80 text-base">
-                  <p>Before TORO, we were on the inside—working for a law office that relied completely on word of mouth.</p>
+                  <p>Before Toro Marketing, we were on the inside—working for a law office that relied completely on word of mouth.</p>
                   <p>No ads. No content. No digital footprint. Just good service and hope people would refer.</p>
                   <p>We decided to change that.</p>
                   <p>We started from scratch—building their brand online, learning the platforms, testing content, and creating strategy from the ground up. After months of figuring out what worked, we launched video campaigns.</p>
@@ -188,7 +188,7 @@ const About: React.FC = () => {
                   </p>
 
                   <p>That wasn’t a fluke. That was proof.</p>
-                  <p>And it became the foundation of TORO:</p>
+                  <p>And it became the foundation of Toro Marketing:</p>
                   <p className="font-semibold text-white">Marketing done right can change everything.</p>
                 </div>
 
@@ -217,10 +217,10 @@ const About: React.FC = () => {
           <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr] items-start">
             {/* LEFT: your full copy in one comfy card */}
             <div className="rounded-2xl border border-toro-gold/25 bg-white/95 p-8 md:p-10 shadow-sm">
-              <h2 className="text-3xl font-bold mb-4">🧠 Why TORO Exists</h2>
+              <h2 className="text-3xl font-bold mb-4">🧠 Why Toro Marketing Exists</h2>
 
               <div className="space-y-4 text-toro-grey leading-relaxed">
-                <p>We started TORO because we saw a massive problem in the industry:</p>
+                <p>We started Toro Marketing because we saw a massive problem in the industry:</p>
                 <p>Agencies selling “strategy” but delivering shortcuts.</p>
                 <p>Charging premium retainers to “keep accounts active,” while putting in the least amount of effort possible.</p>
 
@@ -229,7 +229,7 @@ const About: React.FC = () => {
                   That’s not just dishonest—it’s disrespectful to real business owners doing real work.
                 </div>
 
-                <p>TORO was built to flip the script.</p>
+                <p>Toro Marketing was built to flip the script.</p>
                 <p>We believe marketing should be direct, measurable, and growth-focused.</p>
                 <p>You don’t need a digital babysitter. You need a team that takes ownership.</p>
                 <p>We don’t do fluff. We don’t sell vanity.</p>
@@ -278,7 +278,7 @@ const About: React.FC = () => {
           {/* Heading + soft gold glow */}
           <div className="relative mb-10">
             <div className="pointer-events-none absolute -top-6 left-1/2 h-28 w-72 -translate-x-1/2 rounded-full bg-toro-gold/10 blur-3xl" />
-            <h2 className="relative text-center text-3xl md:text-4xl font-bold">⚙️ What Makes TORO Different</h2>
+            <h2 className="relative text-center text-3xl md:text-4xl font-bold">⚙️ What Makes Toro Marketing Different</h2>
           </div>
 
           {/* Compare lines */}
@@ -393,7 +393,7 @@ const About: React.FC = () => {
                   If you want to look like you're doing marketing, there are hundreds of agencies for that.
                 </p>
                 <p className="mt-3">
-                  If you want to grow, scale, and stand out—TORO is the partner you’ve been looking for.
+                  If you want to grow, scale, and stand out—Toro Marketing is the partner you’ve been looking for.
                 </p>
                 <p className="mt-3">
                   Let’s take your reputation and make it work for you, everywhere your audience looks.

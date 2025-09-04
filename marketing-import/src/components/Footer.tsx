@@ -24,7 +24,6 @@ const Footer: React.FC = () => {
                 <li>Video Content Creation</li>
                 <li>Social Media Campaigns</li>
                 <li>Digital Platform Management</li>
-                <li>Recruiting Services</li>
               </ul>
             </div>
           </div>

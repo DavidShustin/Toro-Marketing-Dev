@@ -115,7 +115,7 @@ const Marketing: React.FC = () => {
 
             <p className="mt-5 text-lg md:text-xl max-w-3xl text-white/90">
               You’re busy running your business with a thousand things on your plate. Chasing leads and managing social
-              media shouldn’t be one of them. That’s where TORO comes in.
+              media shouldn’t be one of them. That’s where Toro Marketing comes in.
             </p>
             <p className="mt-3 max-w-4xl text-base md:text-lg text-white/80">
               It used to be Yellow Pages, mailers, and billboards. Today it’s mobile-first and digital everything. We take the reputation
@@ -217,7 +217,7 @@ const Marketing: React.FC = () => {
                   {/* Value card + logos */}
                   <div>
                     <div className="rounded-2xl border border-toro-gold/20 bg-white/90 shadow-sm p-6">
-                      <h3 className="text-lg font-semibold mb-3">Why clients choose TORO</h3>
+                      <h3 className="text-lg font-semibold mb-3">Why clients choose Toro Marketing</h3>
                       <ul className="space-y-3 text-sm text-toro-dark/85">
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="h-4 w-4 text-toro-gold" /> Content that looks great and sells
@@ -287,7 +287,7 @@ const Marketing: React.FC = () => {
                     <CardTitle>Social Media Management</CardTitle>
                   </CardHeader>
                   <CardContent className="text-toro-dark/80 text-sm">
-                    No time to manage your pages or engage with comments and DMs? We’ve got it covered. TORO runs your Instagram, Facebook, TikTok, and more—keeping your brand active and visible.
+                    No time to manage your pages or engage with comments and DMs? We’ve got it covered. Toro Marketing runs your Instagram, Facebook, TikTok, and more—keeping your brand active and visible.
                   </CardContent>
                 </Card>
 
@@ -377,7 +377,7 @@ const Marketing: React.FC = () => {
                     <h3 className="text-xl font-semibold">Social Media Management</h3>
                   </div>
                   <p className="mt-3 text-white/70 text-sm leading-relaxed">
-                    No time to manage your pages or engage with comments and DMs? We’ve got it covered. TORO runs your Instagram,
+                    No time to manage your pages or engage with comments and DMs? We’ve got it covered. Toro Marketing runs your Instagram,
                     Facebook, TikTok, and more—keeping your brand active and visible.
                   </p>
                 </div>
@@ -477,7 +477,7 @@ const Marketing: React.FC = () => {
               </p>
               <p className="text-toro-grey mt-3">
                 We don’t believe in filler content, fake results, or phoning it in. We build marketing that drives
-                attention, builds demand, and brings you real clients. If your business isn’t growing, we’re not doing our job.
+                attention, builds demand, and brings you real clients. If they aren't buying from you, they are buying from someone else.
               </p>
             </div>
           </div>
@@ -625,7 +625,7 @@ const Marketing: React.FC = () => {
               <h3 className="text-3xl font-bold">📣 Let’s Double Your Business</h3>
               <p className="mt-4 max-w-3xl mx-auto text-toro-dark/80">
                 You’ve done the hard part—built a great reputation, delivered real value, and kept your clients happy.
-                Now it’s time to turn that into visibility and growth. TORO isn’t just marketing. We’re the partner that
+                Now it’s time to turn that into visibility and growth. Toro Marketing isn’t just marketing. We’re the partner that
                 helps you go from word-of-mouth to widely known.
               </p>
 

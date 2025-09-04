@@ -39,9 +39,11 @@ const Pricing: React.FC = () => {
         <section className="bg-toro-dark text-toro-light">
           <div className="container mx-auto max-w-4xl px-4 py-20 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-              💼 Pricing That Reflects Growth, Not Guesswork
+              Pricing That Reflects Growth,
             </h1>
-
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+              Not Guesswork
+            </h1>
             <div className="space-y-3 text-toro-light/90">
               <div className="mt-5 flex flex-wrap justify-center gap-2">
                 {["Custom scope", "Outcome-driven", "Transparent"].map(t => (
@@ -228,7 +230,7 @@ const Pricing: React.FC = () => {
 
                 <CardContent className="flex-1">
                   <p className="text-toro-grey mb-5">
-                    TORO is built for growth-minded business owners who are serious about leveling up their brand,
+                    Toro Marketing is built for growth-minded business owners who are serious about leveling up their brand,
                     presence, and performance.
                   </p>
                   <p className="text-toro-grey mb-4 font-medium">You’re a strong fit if:</p>
