@@ -449,40 +449,42 @@ const Marketing: React.FC = () => {
         {/* =========================== */}
         {/* POSER-FREE ZONE (white)     */}
         {/* =========================== */}
+        {/* =========================== */}
+        {/* POSER-FREE ZONE (white card) */}
+        {/* =========================== */}
         <section className="py-16 px-4 bg-waves-gold-soft text-toro-dark">
-          <div className="container mx-auto max-w-5xl grid md:grid-cols-[1fr,2fr] gap-8 items-center">
-            {/* Left: circle photo */}
-            <div className="flex items-center justify-center">
-              <img
-                src={poserImg}              // or "/assets/poser.jpg"
-                alt="Poser-free"
-                className="
-      h-40 w-40 md:h-48 md:w-48
-      rounded-full object-cover object-center
-      ring-2 ring-toro-gold/30
-      ring-offset-2 ring-offset-white
-      shadow-sm
-    "
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+          <div className="container mx-auto max-w-5xl">
+            <Card className="rounded-2xl border border-toro-gold/20 bg-white shadow-sm">
+              <CardContent className="p-6 md:p-10">
+                <div className="grid md:grid-cols-[1fr,2fr] gap-8 items-center">
+                  {/* Image (no circle, no outline) */}
+                  <div className="flex items-center justify-center">
+                    <img
+                      src={poserImg}
+                      alt="Poser-free"
+                      className="w-full max-w-[28rem] h-auto object-contain rounded-xl"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
 
-            {/* Right: content */}
-            <div>
-              <h3 className="text-3xl font-bold mb-2">🚫 Poser-Free Zone</h3>
-              <p className="text-toro-grey">
-                Most marketing agencies do the bare minimum and call it strategy. They set up a few posts a week and
-                pretend it’s moving the needle. They serve fluff and call it marketing.
-              </p>
-              <p className="text-toro-grey mt-3">
-                We don’t believe in filler content, fake results, or phoning it in. We build marketing that drives
-                attention, builds demand, and brings you real clients. If they aren't buying from you, they are buying from someone else.
-              </p>
-            </div>
+                  {/* Content */}
+                  <div>
+                    <h3 className="text-3xl font-bold mb-2">🚫 Poser-Free Zone</h3>
+                    <p className="text-toro-grey">
+                      Most marketing agencies do the bare minimum and call it strategy. They set up a few posts a week and
+                      pretend it’s moving the needle. They serve fluff and call it marketing.
+                    </p>
+                    <p className="text-toro-grey mt-3">
+                      We don’t believe in filler content, fake results, or phoning it in. We build marketing that drives
+                      attention, builds demand, and brings you real clients. If they aren't buying from you, they are buying from someone else.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
-
         {/* =========================== */}
         {/* HOW WE WORK (dark + hover)  */}
         {/* =========================== */}

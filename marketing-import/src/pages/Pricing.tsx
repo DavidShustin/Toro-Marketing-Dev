@@ -74,7 +74,7 @@ const Pricing: React.FC = () => {
                 {/* Card 1 — ROI message */}
                 <Card className="h-full rounded-2xl border-toro-gold/25 bg-white/95">
                   <CardHeader className="pb-4">
-                    <CardTitle className="text-2xl text-toro-gold">🎯 Our Focus: ROI, Not Activity</CardTitle>
+                    <CardTitle className="text-2xl text-toro-dark text-center">🎯 Our Focus: ROI, Not Activity</CardTitle>
                   </CardHeader>
 
                   <CardContent className="space-y-5 text-base">
@@ -152,7 +152,7 @@ const Pricing: React.FC = () => {
 
 
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-2xl text-toro-gold">🔍 What Influences Pricing</CardTitle>
+                  <CardTitle className="text-2xl text-toro-dark text-center">🔍 What Influences Pricing</CardTitle>
                   <p className="mt-1 text-sm text-toro-grey">
                     We scope around your goals—no one-size-fits-all. These are the levers that typically drive effort and cost.
                   </p>
@@ -219,11 +219,8 @@ const Pricing: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 items-stretch">
               {/* LEFT: Who We Work Best With */}
               <Card className="h-full min-h-[28rem] md:min-h-[32rem] rounded-2xl border border-toro-gold/25 bg-white/95 flex flex-col">
-                <CardHeader className="pb-2">
-                  <div className="flex items-center justify-center gap-3">
-                    <span className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-toro-gold/20 to-toro-gold/10 ring-1 ring-toro-gold/30">
-                      <Handshake className="h-5 w-5 text-toro-gold" />
-                    </span>
+                <CardHeader className="mt-8">
+                  <div className="flex items-center justify-center gap-3 ">
                     <CardTitle className="text-3xl font-bold text-center">🤝 Who We Work Best With</CardTitle>
                   </div>
                 </CardHeader>
@@ -259,12 +256,6 @@ const Pricing: React.FC = () => {
                         <Rocket className="h-4 w-4 text-toro-gold" />
                       </span>
                       <span className="text-toro-dark/90">You want a proactive partner—not someone who waits for direction</span>
-                    </li>
-                    <li className="flex items-start gap-3 rounded-lg bg-toro-gold/5 p-3">
-                      <span className="mt-0.5 grid h-8 w-8 place-content-center rounded-md bg-white ring-1 ring-toro-gold/30">
-                        <Lightbulb className="h-4 w-4 text-toro-gold" />
-                      </span>
-                      <span className="text-toro-dark/90">You understand marketing is a lever, not a luxury</span>
                     </li>
                   </ul>
                 </CardContent>
