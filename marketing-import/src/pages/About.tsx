@@ -74,7 +74,7 @@ const About: React.FC = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link to="/schedul">
+              <Link to="/schedule">
                 <Button variant="gold" className="px-7 py-3 font-semibold">📞 Book a Strategy Call</Button>
               </Link>
               <Link to="/pricing">
