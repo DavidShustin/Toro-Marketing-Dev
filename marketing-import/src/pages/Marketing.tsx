@@ -608,7 +608,7 @@ const Marketing: React.FC = () => {
                   "Competitor research",
                   "Campaign strategy",
                   "Martech setup & support",
-                  "Real results. No hand-holding.",
+                  "Real results No hand-holding",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-toro-gold" />
